@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Thoughts Platform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard">
+        <header>
+            <h1>Your Thoughts & Feedback Dashboard</h1>
+            <div class="user-info">
+                <span id="username"></span>
+                <button onclick="logout()">Logout</button>
+            </div>
+        </header>
+
+        <div class="content">
+            <div class="create-section">
+                <h2>Share Your Thoughts</h2>
+                <form id="thoughtForm">
+                    <input type="text" id="thoughtTitle" placeholder="Title" required>
+                    <textarea id="thoughtContent" placeholder="Write your thoughts or feedback..." required></textarea>
+                    <div class="form-row">
+                        <select id="thoughtCategory">
+                            <option value="thought">Thought</option>
+                            <option value="feedback">Feedback</option>
+                        </select>
+                        <button type="submit">Post</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="thoughts-section">
+                <h2>Your Posts</h2>
+                <div id="thoughtsList"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>
